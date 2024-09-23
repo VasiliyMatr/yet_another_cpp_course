@@ -1,3 +1,5 @@
+add_executable(p01_01 p01_01.cpp)
+
 if (NOT GTest_FOUND)
     return()
 endif ()
