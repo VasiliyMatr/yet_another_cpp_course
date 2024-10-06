@@ -17,4 +17,5 @@ function (add_problem_tests PROBLEM_NAME SRC)
     gtest_discover_tests(${TARGET})
 endfunction ()
 
-add_problem_tests(p02_02 p02_tests.cpp)
+add_problem_tests(p02 p02_tests.cpp)
+add_problem_tests(p03 p03_tests.cpp)
