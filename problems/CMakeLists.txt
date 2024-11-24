@@ -19,3 +19,4 @@ endfunction ()
 
 add_problem_tests(p02 p02_tests.cpp)
 add_problem_tests(p03 p03_tests.cpp)
+add_problem_tests(p04 p04_tests.cpp)
