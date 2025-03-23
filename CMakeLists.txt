@@ -10,6 +10,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wpedantic -Wextra")
 
 # Find Google test
 find_package(GTest QUIET)
+find_package(GMock QUIET)
 if (NOT GTest_FOUND)
   message(WARNING "Google test package not found. Tests will not be build")
 else()
