@@ -179,3 +179,18 @@ TEST(p11_12, std_nth_element) {
             EXPECT_FALSE(*j < *i);
         }
 }
+
+#include "p11_11.hpp"
+
+TEST(p11_11, basic) {
+    std::vector<int> v1{1, 2, 3, 4, 5, 6, 7, 8, 9};
+    std::vector<float> v2{};
+
+    ya_cpp::p11::transform_if(v1.begin(), v1.end(), std::back_inserter(v2),
+                              [](auto el) -> std::optional<float> {
+                                  return el % 2 == 1 ? el / 2.0
+                                                     : std::optional<float>{};
+                              });
+
+    EXPECT_THAT(v2, testing::ElementsAre(0.5, 1.5, 2.5, 3.5, 4.5));
+}
