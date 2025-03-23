@@ -13,6 +13,7 @@ function (add_problem_tests PROBLEM_NAME SRC)
     target_link_libraries(${TARGET}
     PRIVATE
         ${GTEST_LIBRARIES}
+        ${GMOCK_LIBRARIES}
         pthread
     )
 
