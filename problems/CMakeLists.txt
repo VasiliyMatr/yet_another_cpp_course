@@ -1,6 +1,9 @@
 add_subdirectory(p06_01)
 
 add_executable(p01_01 p01_01.cpp)
+add_executable(p14_03 p14_03.cpp)
+
+target_link_libraries(p14_03 PRIVATE pthread)
 
 if (NOT GTest_FOUND)
     return()
